@@ -9,7 +9,23 @@
 </head>
 
 <body onload="start()">
-  
+  <script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      location.href = 'https://funultimate.github.io/Full-Screen-Mario/'
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+</script>
   <!-- Top header -->
   <div id="header">
     <!-- <img id="beta" src="Theme/Beta.png"> -->
